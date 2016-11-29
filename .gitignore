@@ -1,1 +1,6 @@
 /.idea/
+/swagger-jaxrs-server.iml
+/README.md
+/.swagger-codegen-ignore
+/LICENSE
+/target/
