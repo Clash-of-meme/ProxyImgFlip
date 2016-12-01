@@ -14,11 +14,13 @@ public class Constants {
     public static final int ERROR = 503;
     public static final int OK = 200;
     public static final int CREATED = 201;
+    public static final int BAD_REQUEST = 400;
     public static final int NOT_FOUND = 404;
     public static final int FORBIDDEN = 401;
     public static final int UNAUTHORIZE = 403;
 
-public static final String API_KEY ="UHJveHlJbWdGbGlwOmVwc2kyMDE2";
+    public static final String API_LOGIN ="ProxyImgFlip";
+    public static final String API_PASSWORD ="epsi2016";
 
     public static final String URL_IMGFLIP = "https://api.imgflip.com/get_memes";
     public static final String PROTOCOLE = "https";

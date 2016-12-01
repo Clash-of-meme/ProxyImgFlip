@@ -79,9 +79,16 @@ public class MemeApiServiceImpl extends MemeApiService {
 
         logger.info("Appel du service : " + builder.toString());
 
-        builder.setParameter("template_id", id.getIdImgflip())
-                .setParameter("text0", id.getTextTop())
-                .setParameter("text1", id.getTextBottom());
+        if((id.getIdImgflip() != null || id.getIdImgflip() != "")&&(id.getName() != null || id.getName() != "")
+            &&(id.getTextBottom() != "" || id.getTextTop() != "")){
+                builder.setParameter("template_id", id.getIdImgflip())
+                        .setParameter("text0", id.getTextTop())
+                        .setParameter("text1", id.getTextBottom());
+        }
+        else
+        {
+            return Response.status(Constants.BAD_REQUEST).build();
+        }
 
         try {
             HttpClient client = new DefaultHttpClient();

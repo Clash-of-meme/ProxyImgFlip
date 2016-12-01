@@ -45,10 +45,10 @@ public class MemePattern   {
   private String name = null;
 
   @JsonProperty("text_top")
-  private String textTop = null;
+  private String textTop = "";
 
   @JsonProperty("text_bottom")
-  private String textBottom = null;
+  private String textBottom = "";
 
   public MemePattern idImgflip(String idImgflip) {
     this.idImgflip = idImgflip;
