@@ -30,6 +30,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.json.JSONObject;
 
 /**
  * Objet Meme Pattern
@@ -146,7 +147,7 @@ public class MemePattern   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MemePattern {\n");
+    sb.append("class Mettern {\n");
     
     sb.append("    idImgflip: ").append(toIndentedString(idImgflip)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -154,6 +155,15 @@ public class MemePattern   {
     sb.append("    textBottom: ").append(toIndentedString(textBottom)).append("\n");
     sb.append("}");
     return sb.toString();
+  }
+
+  public JSONObject toJSON() {
+      JSONObject sb= new JSONObject();
+      sb.append("idImgflip",this.idImgflip);
+      sb.append("name",this.name);
+      sb.append("textTop",this.textTop);
+      sb.append("texBottom",this.textBottom);
+    return sb;
   }
 
   /**
