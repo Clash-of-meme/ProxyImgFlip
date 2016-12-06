@@ -4,3 +4,4 @@
 /.swagger-codegen-ignore
 /LICENSE
 /target/
+!/README.md
