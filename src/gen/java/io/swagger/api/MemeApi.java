@@ -59,10 +59,14 @@ public class MemeApi  {
     }, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 201, message = "Successful response", response = MemeReturn.class),
-        
+
+        @io.swagger.annotations.ApiResponse(code = 400, message = "L'id du meme n'existe pas.", response = MemeReturn.class),
+
         @io.swagger.annotations.ApiResponse(code = 401, message = "Vous devez êtes identifier pour accéder à cette ressource.", response = MemeReturn.class),
         
         @io.swagger.annotations.ApiResponse(code = 403, message = "Vous n'avez pas l'autorisation d'accéder à cette ressource.", response = MemeReturn.class),
+
+        @io.swagger.annotations.ApiResponse(code = 404, message = "L'id du meme est introuvable.", response = MemeReturn.class),
         
         @io.swagger.annotations.ApiResponse(code = 503, message = "ImgFlip n'a pas répondu", response = MemeReturn.class) })
     public Response memePost(@ApiParam(value = "Meme que l'on veut créer" ,required=true) MemePattern id
